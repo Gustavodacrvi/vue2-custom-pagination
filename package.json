@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Completely customizable custom pagination component for vue.js version 2",
   "author": "Gustavo da Cruz Vieira",
-  "keywords,": ["Vue.js", "Vue2", "pagination", "custom", "component", "customizable", "version 2"],
+  "keywords": ["Vue.js", "Vue2", "pagination", "custom", "component", "customizable", "version 2"],
   "license": "MIT License",
   "repository": {
     "type": "git",
