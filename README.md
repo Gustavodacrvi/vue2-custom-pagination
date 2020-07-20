@@ -15,8 +15,8 @@ Completely customizable custom pagination component for vue.js version 2.
 To use this component, you must provide a _template_ for the pagination elements and a _v-model_ for controlling the active page. You must provide both
 *listLength* and *pageSize* or *only* *numberOfTabs* props.
 
-In this example, we're using a *scope* of 5, which means the distance between the center *active* element and the corners of the container will be inclusively 5 elements.<br>
-We're also using the *isActive* to show the active blue element, the *isMin* and *isMax* to add a border-radius to all sides on the element "1" and the element "970", and *isFirst* and *isLast*<br>
+In this example, we're using a *scope* of 5, which means the distance between the center *active* element and the corners of the container will be inclusively 5 elements.
+We're also using the *isActive* to show the active blue element, the *isMin* and *isMax* to add a border-radius to all sides on the element "1" and the element "970", and *isFirst* and *isLast*
 for adding a curved border only on the "30"/"38" corners.
 
 ![Pagination Example](/screenshots/example.png)
