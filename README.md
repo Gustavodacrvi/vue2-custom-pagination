@@ -4,9 +4,9 @@ Completely customizable custom pagination component for vue.js version 2.
 
 ## TABLE OF CONTENTS
 * [Example](#example)
-* [Component Props](#component_props)
-* [Default Template Slot Props](#default_slotprops)
-* [Divisor Template Slot Props](#divisor_slotprops)
+* [Component Props](#component-props)
+* [Default Template Slot Props](#Default-Template-Slot-Props)
+* [Divisor Template Slot Props](#Divisor-Template-Slot-Props)
 * [Notes](#notes)
 
 
