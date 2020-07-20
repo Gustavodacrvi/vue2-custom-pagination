@@ -1,6 +1,6 @@
 {
   "name": "vue2-custom-pagination",
-  "version": "1.0.0",
+  "version": "1.0.0.1",
   "description": "Completely customizable custom pagination component for vue.js version 2",
   "author": "Gustavo da Cruz Vieira",
   "keywords": ["Vue.js", "Vue2", "pagination", "custom", "component", "customizable", "version 2"],
