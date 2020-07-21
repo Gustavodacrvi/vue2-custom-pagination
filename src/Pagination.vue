@@ -5,7 +5,6 @@
         <slot
           v-bind="{
             number: 1,
-            select: () => current = data.initial + num,
             
             classObj: {
               isActive: getNumberOfTabs === 0,
@@ -20,7 +19,6 @@
       <slot v-for="num in displayNumbers"
         v-bind="{
           number: data.initial + num,
-          select: () => current = data.initial + num,
 
           classObj: {
             isActive: (data.initial + num) === value,
@@ -34,11 +32,10 @@
         <slot name="divisor" v-bind="{isLast: true}">...</slot>
         <slot
           v-bind="{
-            number: numberOfTabs,
-            select: () => current = data.initial + num,
+            number: getNumberOfTabs,
 
             classObj: {
-              isActive: numberOfTabs === value,
+              isActive: getNumberOfTabs === value,
               isMax: true,
             },
           }"
@@ -61,6 +58,7 @@ export default {
     },
     scope: {
       type: Number,
+      default: 4,
     },
 
     listLength: {
@@ -99,7 +97,7 @@ export default {
     data() {
       const val = this.value
       const max = this.getNumberOfTabs
-      let off = this.scope || 3
+      let off = this.scope
 
       if (off < 1)
         off = 2
@@ -117,6 +115,7 @@ export default {
 
       if (initial < 0)
         initial = 0
+
 
       return {
         implement,

@@ -1,6 +1,6 @@
 {
   "name": "vue2-custom-pagination",
-  "version": "1.0.1",
+  "version": "1.0.9",
   "description": "Completely customizable custom pagination component for vue.js version 2",
   "author": "Gustavo da Cruz Vieira",
   "keywords": ["Vue.js", "Vue2", "pagination", "custom", "component", "customizable", "version 2"],
@@ -9,23 +9,24 @@
     "type": "git",
     "url": "https://github.com/Gustavodacrvi/vue2-custom-pagination"
   },
-  "homepage": "https://github.com/Gustavodacrvi/vue2-custom-pagination",
+  "main": "dist/vue2-custom-pagination.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "webpack --config config/webpack.config.js",
-    "lint": "vue-cli-service lint"
+    "build-package": "vue-cli-service build --target wc --name vue2-custom-pagination ./src/Pagination.vue",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.1.0",
-    "babel-preset-env": "^1.7.0",
-    "cross-env": "^7.0.2",
-    "css-loader": "^3.6.0",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
