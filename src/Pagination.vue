@@ -1,5 +1,5 @@
 <template>
-  <div class="_SimplePagination">
+  <div class="_CustomPagination">
     <template v-if="getNumberOfTabs && getNumberOfTabs !== 1">
       <template v-if="showFirstElement">
         <slot
@@ -52,6 +52,7 @@ export default {
   props: {
     value: {
       type: Number,
+      default: 1,
     },
     numberOfTabs: {
       type: Number,
@@ -79,11 +80,15 @@ export default {
       const pageSize = this.pageSize
       const numberOfTabs = this.numberOfTabs
       
-      if ((listLength || pageSize) && numberOfTabs)
-        throw `You either provide both "pageSize" and "listLength" or only "numberOfTabs"!`
+      if (((listLength || pageSize) && numberOfTabs) || (!listLength && !pageSize && !numberOfTabs))
+        throw `You must either provide both "pageSize" and "listLength" or only "numberOfTabs"!`
       
       if (numberOfTabs)
         return this.numberOfTabs
+
+      if (!listLength || !pageSize)
+        throw `You must provide "listLength" and "pageSize", listLength: ${listLength}, pageSize: ${pageSize}`
+      
       return Math.ceil(listLength / pageSize)
     },
     
@@ -146,7 +151,7 @@ export default {
 
 <style scoped>
 
-._SimplePagination {
+._CustomPagination {
   display: flex;
   justify-content: center;
 }

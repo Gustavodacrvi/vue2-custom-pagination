@@ -85,7 +85,7 @@ for adding a curved border only on the "30"/"38" corners.
 
 | Prop      | Type | Default | Description |
 | -------------|:-------------:|:-------------:|:-------------|
-| value | Number | undefined | Used on v-model. |
+| value | Number | 1 | Used on v-model. |
 | numberOfTabs | Number | undefined | Sometimes you know *exactly* how many tabs you need, on these cases you *should* use this prop. |
 | scope | Number | 4 | It's the *inclusive* distance between the active element and the corners. |
 | listLength | Number | undefined | When you don't know *exactly* the number of tabs you need, you should use this prop in conjunction with the *pageSize* prop. The component will automatically calculate the number of tabs. |
